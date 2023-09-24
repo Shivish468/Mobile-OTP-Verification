@@ -25,18 +25,20 @@ export default function Signin() {
                             Please sign in to your account
                         </span>
                     </div>
-                <div>
-                    <PhoneInput country={"in"}  value={ph} onChange={setPh}/>
-                </div> 
+                <form action='/verify' id='tele'> 
+                    <div className=' flex justify-between items-center'>
+                      <PhoneInput country={"in"}  value={ph} onChange={setPh}  />
+                    </div>
                 <div className=' flex flex-col text-xl items-center text-gray-500'>
                 <span>We will send you a one time SMS message,</span> 
                 <span>Chages may apply.</span>
                 
                 </div>  
-           <button onClick={onSignin} className="bg-yellow-600 w-1/2 rounded-lg items-center justify-center py-2.5 text-white">
+           <button onClick={onSignin} type='submit' className="bg-yellow-600 w-1/2 rounded-lg items-center justify-center py-2.5 text-white">
             { loading && (<CgSpinner size={20} className="mt-1 animate-spin" />)}
             <span><Link to='/verify'>Sign In with OTP</Link></span>
-        </button>
+           </button>
+        </form>
       </div> 
     </div>
 </div>

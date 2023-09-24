@@ -11,6 +11,6 @@ app.use(cors())
 app.use(express.json())
 
 // Load Routes
-app.use("/", userRoutes)
+app.use("/api/user", userRoutes)
 
 export default app;

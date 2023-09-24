@@ -25,14 +25,15 @@ export default function Verify() {
           <div className='text-1xl justify-center items-center' >
             <p className='hover: underline text-yellow-300  text-center'><Link to='/'>Change Phone Number</Link></p>
           </div>
-          <form action='/sendmessage' method='post' id='otp' className='py-4 flex flex-row h-auto justify-center text-center px-2 mt-5'>
+          <form action='/login' id='otp'>
+          <div className='py-4 flex flex-row h-auto justify-center text-center px-2 mt-5'>
             <input className='m-5 border h-12 w-12 text-center form-control rounded' type='text' id='first' maxLength={1} required/>
             <input className='m-5 border h-12 w-12 text-center form-control rounded' type='text' id='second' maxLength={1} required/>
             <input className='m-5 border h-12 w-12 text-center form-control rounded' type='text' id='third' maxLength={1} required/>
             <input className='m-5 border h-12 w-12 text-center form-control rounded' type='text' id='fourth' maxLength={1} required/>
             <input className='m-5 border h-12 w-12 text-center form-control rounded' type='text' id='fifth' maxLength={1} required/>
             <input className='m-5 border h-12 w-12 text-center form-control rounded' type='text' id='sixth' maxLength={1} required/>
-          </form>
+          </div>
           <div className='py-4 text-center text-gray-800'>
           <span>Didn't recieve the code? <a href='/verify'>Resend</a></span>
           </div>
@@ -40,6 +41,7 @@ export default function Verify() {
           {loading && (<CgSpinner size={20} className="mt-1 animate-spin" />)}
           <span><Link to='/login'>Verify</Link></span>
         </button> 
+        </form>
       </div>
     </div>
   </div>
